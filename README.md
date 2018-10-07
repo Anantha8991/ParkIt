@@ -9,7 +9,7 @@ Smartphones have attracted increasing attentions from both academic and industri
 
 ### Deployment
 
-You can clone it and run it on your Phone or just download the ParkIt.apk and install it on your Android Phone. 
+You can clone it and run it on your Phone or just download the ```ParkIt.apk``` and install it on your Android Phone. 
 
 
 ## Built With
