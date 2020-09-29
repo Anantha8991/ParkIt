@@ -58,10 +58,7 @@ public class MyspotsActivity extends AppCompatActivity {
         viewloc();
 
 
-
-
-
-    }
+        }
 
     public void viewloc() {
 
@@ -69,6 +66,7 @@ public class MyspotsActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(String response){
+
                 Toast.makeText(MyspotsActivity.this, response, Toast.LENGTH_LONG).show();
 
                // String[] fetch = response.split(":");

@@ -42,7 +42,6 @@ public class RegisterActivity extends Activity {
     private Spinner customertype;
     private ProgressDialog pDialog;
     private SessionManager session;
-    private SQLiteHandler db;
     private TextView customer;
 
    // private static final String[] customer_type = {"Spot", "Park"};
@@ -97,9 +96,6 @@ public class RegisterActivity extends Activity {
 
         // Session manager
         session = new SessionManager(getApplicationContext());
-
-        // SQLite database handler
-        db = new SQLiteHandler(getApplicationContext());
 
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
@@ -183,9 +179,6 @@ public class RegisterActivity extends Activity {
                         String customertype = user.getString("customertype");
                         String created_at = user
                                 .getString("created_at");
-
-                        // Inserting row in users table
-                        db.addUser(name, email, aadhaar, customertype, uid, created_at);
 
                         Toast.makeText(getApplicationContext(), "User successfully registered. Try login now!", Toast.LENGTH_LONG).show();
 

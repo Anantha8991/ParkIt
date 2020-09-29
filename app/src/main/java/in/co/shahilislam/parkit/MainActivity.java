@@ -103,8 +103,6 @@ public class MainActivity extends AppCompatActivity
 
    // private static String URL  ="http://vga.ramstertech.com/freebieslearning/login.php";
 
-    // handling logout
-    private SQLiteHandler db;
     private SessionManager session;
 
     @Override
@@ -142,8 +140,6 @@ public class MainActivity extends AppCompatActivity
          */
 
 
-        // SqLite database handler
-        db = new SQLiteHandler(getApplicationContext());
 
         // session manager
         session = new SessionManager(getApplicationContext());
@@ -152,11 +148,6 @@ public class MainActivity extends AppCompatActivity
             logoutUser();
         }
 
-        // Fetching user details from SQLite
-        HashMap<String, String> user = db.getUserDetails();
-
-        String name = user.get("name");
-        String email = user.get("email");
 
         // Displaying the user details on the screen
       //  txtName.setText(name);
@@ -415,8 +406,6 @@ public class MainActivity extends AppCompatActivity
      * */
     private void logoutUser() {
         session.setLogin(false);
-
-        db.deleteUsers();
 
         // Launching the login activity
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
