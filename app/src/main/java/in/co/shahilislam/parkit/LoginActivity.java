@@ -127,14 +127,13 @@ public class LoginActivity extends Activity {
 
                 if(response.contains("Data Matched")) {
 
+                    Toast.makeText(LoginActivity.this, "Welcome", Toast.LENGTH_LONG).show();
                     session.setLogin(true);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                   //  startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 }
-
-                Toast.makeText(LoginActivity.this, response, Toast.LENGTH_LONG).show();
 
             }
 

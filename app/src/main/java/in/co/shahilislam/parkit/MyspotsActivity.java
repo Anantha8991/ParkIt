@@ -36,25 +36,6 @@ public class MyspotsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myspots);
 
-
-        /**
-        recyclerView = (RecyclerView)findViewById(R.id.places_list_recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        listItems = new ArrayList<ListPlace>();
-        //  for (int i = 0; i < placeID.length(); i++) {
-        // String[] f = fetch[i].split(";");
-        ListPlace listItem = new ListPlace();
-        listItem.setName( TAG_ARRAY );
-       // listItem.setAddress( q );
-        listItems.add(listItem);
-        // }
-        adapter = new MyAdapter(listItems, MyspotsActivity.this);
-        recyclerView.setAdapter(adapter);
-
-         **/
-
         viewloc();
 
 
@@ -72,37 +53,6 @@ public class MyspotsActivity extends AppCompatActivity {
                // String[] fetch = response.split(":");
 
                 if(response.contains("Retrived")) {
-
-
-
-
-/**
-                    String json="{'abridged_cast':[{'name':'JeffBridges','id':'162655890','characters':['JackPrescott']},{'name':'CharlesGrodin','id':'162662571','characters':['FredWilson']},{'name':'JessicaLange','id':'162653068','characters':['Dwan']},{'name':'JohnRandolph','id':'162691889','characters':['Capt.Ross']},{'name':'ReneAuberjonois','id':'162718328','characters':['Bagley']}]}";
-
-                    JSONObject jsonResponse;
-                    try {
-                        ArrayList<String> temp = new ArrayList<String>();
-                        jsonResponse = new JSONObject(json);
-                        JSONArray movies = jsonResponse.getJSONArray("abridged_cast");
-
-                        for(int i=0;i<movies.length();i++){
-                            JSONObject movie = movies.getJSONObject(i);
-                            JSONArray characters = movie.getJSONArray("characters");
-                            for(int j=0;j<characters.length();j++){
-                                temp.add(characters.getString(j));
-                            }
-                        }
-                        Toast.makeText(this, "Json: "+temp, Toast.LENGTH_LONG).show();
-                    } catch (JSONException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-
-**/
-
-
-
-
 
                     recyclerView = (RecyclerView)findViewById(R.id.places_list_recycler_view);
                     recyclerView.setHasFixedSize(true);

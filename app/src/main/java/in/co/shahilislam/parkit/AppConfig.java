@@ -2,7 +2,7 @@ package in.co.shahilislam.parkit;
 
 public class AppConfig {
 
-    public static String URL_BASE = "http://parkitweb.000webhostapp.com/";
+    public static String URL_BASE = "https://parkitweb1.000webhostapp.com/";
 
     public static String URL_LOGIN = URL_BASE + "login.php";
 
